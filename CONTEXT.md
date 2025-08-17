@@ -205,8 +205,8 @@ com.datapublic.mcp.storage/
 
 ## 🔗 관련 프로젝트
 
-- **[public-data-mcp-server](../public-data-mcp-server/)**: MCP 서버
-- **[vue-mcp-integration](../vue-mcp-integration/)**: Vue.js 프론트엔드 클라이언트
+- **[public-data-mcp-server](https://github.com/constant94-dev/public-data-mcp-server)**: MCP 서버
+- **[vue-mcp-integration](https://github.com/constant94-dev/vue-mcp-integration)**: Vue.js 프론트엔드 클라이언트
 
 ## 📝 업데이트 히스토리
 
