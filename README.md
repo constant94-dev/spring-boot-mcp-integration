@@ -85,8 +85,8 @@ storage/                # 데이터 모듈
 
 ## 🔗 관련 프로젝트
 
-- **[vue-mcp-integration](../vue-mcp-integration/)**: Vue.js 프론트엔드 클라이언트
-- **[public-data-mcp-server](../public-data-mcp-server/)**: 공공데이터 MCP 서버
+- **[vue-mcp-integration](https://github.com/constant94-dev/vue-mcp-integration)**: Vue.js 프론트엔드 클라이언트
+- **[public-data-mcp-server](https://github.com/constant94-dev/public-data-mcp-server)**: 공공데이터 MCP 서버
 
 ---
 
