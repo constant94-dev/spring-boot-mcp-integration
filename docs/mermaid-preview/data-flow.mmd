@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant Client as MCP Client
+    participant Web as Web Module
+    participant Storage as Storage Module
+    participant Redis as Redis Database
+    
+    Client->>Web: API Request
+    Web->>Web: Validate Request
+    Web->>Storage: Get Data from Cache
+    Storage->>Redis: Check Cache
+    
+    alt Cache Hit
+        Redis-->>Storage: Return Cached Data
+        Storage-->>Web: Return Data
+    else Cache Miss
+        Web->>Web: Process Business Logic
+        Web->>Storage: Store Result
+        Storage->>Redis: Save to Cache
+        Web-->>Client: Return Response
+    end
+

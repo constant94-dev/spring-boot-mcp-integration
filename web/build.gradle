@@ -1,0 +1,17 @@
+dependencies {
+    // Storage 모듈 의존성
+    implementation project(':storage')
+    
+    // Web 관련 추가 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    
+    // API 문서화
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+    
+    // CORS 지원 (Vue.js 프론트엔드 연동)
+    implementation 'org.springframework.boot:spring-boot-starter-cors'
+    
+    // 테스트 추가 의존성
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+}

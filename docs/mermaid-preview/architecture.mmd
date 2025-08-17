@@ -1,0 +1,55 @@
+flowchart TB
+    subgraph "External Systems"
+        MCP[MCP Client]
+        API[External APIs]
+        UI[Web UI]
+    end
+    
+    subgraph "Spring Boot Application"
+        subgraph "Web Module"
+            Controller[Controller Layer]
+            Service[Service Layer]
+            Repository[Repository Layer]
+            DTO[DTO Layer]
+            Config[Web Config]
+            Exception[Exception Handler]
+        end
+        
+        subgraph "Storage Module"
+            RedisService[Redis Service]
+            CacheManager[Cache Manager]
+            SessionStore[Session Store]
+        end
+        
+        subgraph "Common"
+            Security[Security Config]
+            Logging[Logging]
+            Monitoring[Monitoring]
+        end
+    end
+    
+    subgraph "External Storage"
+        Redis[(Redis Database)]
+    end
+    
+    %% External connections
+    MCP --> Controller
+    API --> Service
+    UI --> Controller
+    
+    %% Internal connections
+    Controller --> Service
+    Service --> Repository
+    Service --> RedisService
+    Repository --> RedisService
+    RedisService --> Redis
+    
+    %% Cross-cutting concerns
+    Security --> Controller
+    Logging --> Service
+    Monitoring --> Service
+    
+    %% Data flow
+    DTO --> Controller
+    Exception --> Controller
+    Config --> Controller

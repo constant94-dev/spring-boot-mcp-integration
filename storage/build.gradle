@@ -1,0 +1,18 @@
+dependencies {
+    // Storage 관련 추가 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    
+    // Redis 추가 기능
+    implementation 'org.springframework.session:spring-session-data-redis'
+    
+    // 데이터베이스 마이그레이션
+    implementation 'org.flywaydb:flyway-core'
+    
+    // 테스트 추가 의존성
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:postgresql'
+    testImplementation 'org.testcontainers:testcontainers'
+}

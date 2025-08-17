@@ -1,0 +1,5 @@
+rootProject.name = 'spring-boot-mcp-integration'
+
+include 'web'
+include 'storage'
+include 'frontend'
