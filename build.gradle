@@ -3,7 +3,7 @@ plugins {
     id 'org.springframework.boot' version '3.4.0'
     id 'io.spring.dependency-management' version '1.1.6'
     id 'org.sonarqube' version '4.4.1.3373'
-    id 'jacoco' version '0.8.11'
+    id 'jacoco'
 }
 
 allprojects {
@@ -102,6 +102,17 @@ bootJar {
 
 jar {
     enabled = true
+}
+
+// Storage 모듈 설정 (라이브러리 모듈)
+project(':storage') {
+    bootJar {
+        enabled = false
+    }
+    
+    jar {
+        enabled = true
+    }
 }
 
 // 전체 프로젝트 테스트 실행
